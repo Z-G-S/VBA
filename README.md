@@ -18,3 +18,28 @@ The application is an Automated Sales Data Entry and Visualisation System that i
 ![Screenshot 2024-02-10 000907](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/a224781e-d380-4064-bd72-c7ad133f9c30)
 ![Screenshot 2024-02-10 000919](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/c24eeb0b-aa13-405e-ab06-3dd7e495296b)
 
+# Microsoft Excel Objects/Worksheets
+
+ThisWorkbook
+Contains the subroutine to hide all data sheets upon start up and activates the Login userform. It is the first step of enhancing the security of the application.
+
+Login
+The login sheet contains no data or subroutine, with its sole purpose of being a bridge between login and accessing the data sheets, acting as a placeholder. 
+
+Data_Entry and OpenApplication_Click
+This sheet contains the command button that when clicked opens the application. This sheet also contains various charts and visualisations that are linked to other sheets, and display in the multiple pages of the ASDEVS userform such as the Visualisations page and the World Sales Map page. It also contains a live picture of data from the calculations sheet and so on its own acts as a visualisation dashboard, but also is a necessary store for the visualisations displayed in the ASDEVS userform. 
+
+Prices_Costs_Data
+This sheet contains all of the prices and costs data of the products, with editable and non-editable fields clearly labelled.
+
+Support_Data
+This sheet provides support data for the application, providing use to various comboboxes and a store for the last edit functionality. 
+
+Completed
+This sheet is a database of the associated data collected from a successful entry.
+
+Cancelled
+This sheet is a database of the associated data collected from a cancelled entry.
+
+Calculations
+The calculations sheet is where the majority of the calculations needed for output analytics and visualisations in the ASDEVS userform and data entry sheet occur. Any changes here will systematically impact how the application deals with values and how/where it outputs them.
