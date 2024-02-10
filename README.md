@@ -47,6 +47,7 @@ The calculations sheet is where the majority of the calculations needed for outp
 # Userforms
 
 **_LoginForm_** - Provides a layer of security to the application, only allowing users with correct login credentials to proceed. 
+
 **User Authentication and Workbook/Data Sheets access**
 **cmdSignIn_Click:** This subroutine executes upon clicking the Sign-In button. It checks for empty fields in the LoginForm textboxes, validates the user credentials, and if correct, makes the data sheets visible to the user, if not, it displays an error. This subroutine enhances security by showing the data sheets only upon correct entry, protecting the data from unauthorised users.
 
