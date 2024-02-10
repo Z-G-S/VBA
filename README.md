@@ -29,17 +29,99 @@ The login sheet contains no data or subroutine, with its sole purpose of being a
 **Data_Entry and OpenApplication_Click** -
 This sheet contains the command button that when clicked opens the application. This sheet also contains various charts and visualisations that are linked to other sheets, and display in the multiple pages of the ASDEVS userform such as the Visualisations page and the World Sales Map page. It also contains a live picture of data from the calculations sheet and so on its own acts as a visualisation dashboard, but also is a necessary store for the visualisations displayed in the ASDEVS userform. 
 
-Prices_Costs_Data
+**Prices_Costs_Data** -
 This sheet contains all of the prices and costs data of the products, with editable and non-editable fields clearly labelled.
 
-Support_Data
+**Support_Data** -
 This sheet provides support data for the application, providing use to various comboboxes and a store for the last edit functionality. 
 
-Completed
+**Completed** -
 This sheet is a database of the associated data collected from a successful entry.
 
-Cancelled
+**Cancelled** -
 This sheet is a database of the associated data collected from a cancelled entry.
 
-Calculations
+**Calculations** -
 The calculations sheet is where the majority of the calculations needed for output analytics and visualisations in the ASDEVS userform and data entry sheet occur. Any changes here will systematically impact how the application deals with values and how/where it outputs them.
+
+# Userforms
+
+_LoginForm_ - Provides a layer of security to the application, only allowing users with correct login credentials to proceed. 
+User Authentication and Workbook/Data Sheets access
+cmdSignIn_Click: This subroutine executes upon clicking the Sign-In button. It checks for empty fields in the LoginForm textboxes, validates the user credentials, and if correct, makes the data sheets visible to the user, if not, it displays an error. This subroutine enhances security by showing the data sheets only upon correct entry, protecting the data from unauthorised users.
+
+ADSEVS - Contains the bulk of the operations of the application from manipulating data sheets to displaying visualisations and analytics. 
+Initialisation and Setup
+userform_initialize: Initialises the user form with necessary configurations and data.
+ListBoxPages_Change: Manages the list box selection changes.
+SetNormalViewZoom: Sets the zoom level of the active worksheet.
+
+Form Control and Navigation
+DataEntry_Click: Shows the Data Entry page.
+Visualisations_Click: Handles the display and update of charts and financial metrics.
+WorldSalesMap_Click: Displays the world sales map.
+UserManual_Click: Displays the user manual.
+ResetButtonColours: Resets the background colours of specific buttons on the user form.
+CloseButton_Click: Closes the user form.
+
+Data Entry, Editing, and Updates
+cmdSubmit_Click: Handles the submission of data in the user form with validations.
+cmdEdit_Click: Manages the editing of selected entries.
+cmdDelete_Click: Handles the deletion of selected entries.
+cmdCancel_Click: Manages the cancellation of selected entries.
+ResetButton_Click: Clears all input fields and updates counters.
+RowCount_Completed: Calculates and updates the number of populated rows in the 'Completed' sheet.
+RowCount_Cancelled: Calculates and updates the number of rows populated in the 'Cancelled' sheet.
+
+Search Functionality
+cmdSearchID1_Click: Searches for a customer ID in the 'Completed' list.
+cmdNextMatch1_Click: Finds the next match in the 'Completed' list.
+cmdSearchID2_Click: Searches for a customer ID in the 'Cancelled' list.
+cmdNextMatch2_Click: Finds the next match in the 'Cancelled' list.
+
+
+Sorting Data
+cmdNewtoOld1_Click: Sorts data in the 'Completed' sheet from newest to oldest Date.
+cmdOldtoNew1_Click: Sorts data in the 'Completed' sheet from oldest to newest Date.
+cmdNewtoOld2_Click: Sorts data in the 'Cancelled' sheet from newest to oldest Date.
+cmdOldtoNew2_Click: Sorts data in the 'Cancelled' sheet from oldest to newest Date.
+
+Visualisation and Reporting
+RenderCharts: Calls subroutines to update the charts.
+UpdateAndActivateChart: Refreshes specified charts.
+RevenuePieChart_Click, ProfitPieChart_Click, CostPieChart_Click, SourcePieChart_Click: Handle the display of various charts.
+RefreshChartsandData_Click: Updates charts and data.
+RefreshWorldMap_Click: Updates the world map chart.
+
+Utility and Validation Functions
+ValidateComboBox: Validates ComboBox inputs.
+GetPriceAndCost: Retrieves price and cost information for products.
+
+Data Export
+cmdExport_Click: Exports data to a xlsm file.
+ExportSheet: A helper subroutine for data export.
+
+Miscellaneous
+cmdFullScreen_Click: Manages full screen mode for the form.
+info1_Click, info2_Click: Display the user manual.
+
+Order_Cancellation - Provides the ability to cancel orders.
+Initialisation and Setup
+userform_initialize: Initialises the form, populates the DateComboBox, sets up an acceptable range that the “Reason” combobox will accept from the Support_Data sheet, and obtains the current date and user information from the system environment.
+
+Form Control and Navigation
+cmdSubmit_Click: Handles the submission of data in the user form with validations, transferring the data to the “Cancelled” data sheet.
+CloseButton_Click: Closes the userform.
+ResetButton_Click: Resets the input fields excluding customer name and email as they're taken from the “Completed” data sheet.
+
+Miscellaneous
+info3_Click: Displays the user manual.
+
+User_Manual - Contains a series of pages & images aimed at helping users.
+Initialisation and Setup
+userform_initialize: Highlights the DataEntryCB button if the multipage value equals zero.
+
+Form Control and Navigation
+ResetButtonColours: Used to reset all button colours back to default.
+BackHelpButton_Click: Ensures that the menu buttons on the ASDEVS userform are highlighted correctly, and closes the User_Manual.
+Subroutines DataEntryCB_Click to CalculationsCB_Click: Perform the necessary page changes and highlighting changes. 
