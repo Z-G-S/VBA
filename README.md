@@ -23,7 +23,7 @@ The application is an Automated Sales Data Entry and Visualisation System that i
 ThisWorkbook
 Contains the subroutine to hide all data sheets upon start up and activates the Login userform. It is the first step of enhancing the security of the application.
 
-Login
+*Login*
 The login sheet contains no data or subroutine, with its sole purpose of being a bridge between login and accessing the data sheets, acting as a placeholder. 
 
 Data_Entry and OpenApplication_Click
