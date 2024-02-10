@@ -20,8 +20,7 @@ The application is an Automated Sales Data Entry and Visualisation System that i
 
 # Images of the Technical Documentation
 
-![Screenshot 2024-02-10 001642](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/3bdc5fbc-8d03-4dbd-b20e-0ee77d07c56b)
-![Screenshot 2024-02-10 001629](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/577e5d32-e8c0-475d-b9db-f98fb9c4ca8c)
-![Screenshot 2024-02-10 001615](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/32f7af6d-c473-4c17-b2a5-2b9fb2481aab)
 ![Screenshot 2024-02-10 001603](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/9d5a58a9-abf8-475f-976a-3c24a1f47ce6)
-
+![Screenshot 2024-02-10 001615](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/32f7af6d-c473-4c17-b2a5-2b9fb2481aab)
+![Screenshot 2024-02-10 001629](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/577e5d32-e8c0-475d-b9db-f98fb9c4ca8c)
+![Screenshot 2024-02-10 001642](https://github.com/Z-G-S/VBA-Automated-Sales-Data-Entry-and-Visualisation-System/assets/140622522/3bdc5fbc-8d03-4dbd-b20e-0ee77d07c56b)
